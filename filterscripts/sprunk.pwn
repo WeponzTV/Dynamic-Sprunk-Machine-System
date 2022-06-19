@@ -147,16 +147,9 @@ public OnPlayerUseMachine(playerid)
 
 YCMD:createsprunk(playerid, params[], help)
 {
-	new query[256], Float:pos[4], direction[8], id = Iter_Free(Sprunks);
+	new query[256], Float:pos[4], id = Iter_Free(Sprunks);
 	if(!IsPlayerAdmin(playerid)) return SendClientMessage(playerid, -1, "SERVER: You must be logged in as RCON admin to use this command.");
 	if(id == INVALID_ITERATOR_SLOT) return SendClientMessage(playerid, -1, "SERVER: You have reached the max aloud sprunk machines. (Increase MAX_SPRUNKS in sprunk.pwn)");
-	if(sscanf(params, "s[8]", direction)) return SendClientMessage(playerid, -1, "USAGE: /createsprunk [north/south/east/west]");
-	
-	if(!strcmp(direction, "north", true)) { SprunkData[id][sprunk_r] = 180.0; }
-	else if(!strcmp(direction, "south", true)) { SprunkData[id][sprunk_r] = 0.0; }
-	else if(!strcmp(direction, "east", true)) { SprunkData[id][sprunk_r] = 90.0; }
-	else if(!strcmp(direction, "west", true)) { SprunkData[id][sprunk_r] = -90.0; }
-	else return SendClientMessage(playerid, -1, "SERVER: Invalid direction. Must be: north/south/east/west");
 	
 	GetPlayerPos(playerid, pos[0], pos[1], pos[2]);
 	GetPlayerFacingAngle(playerid, pos[3]);
@@ -164,6 +157,8 @@ YCMD:createsprunk(playerid, params[], help)
 	SprunkData[id][sprunk_x] = pos[0];
 	SprunkData[id][sprunk_y] = pos[1];
 	SprunkData[id][sprunk_z] = pos[2];
+
+	SprunkData[id][sprunk_r] = pos[3]; // There is no reason to complicate
 
 	SprunkData[id][sprunk_interior] = GetPlayerInterior(playerid);
 	SprunkData[id][sprunk_world] = GetPlayerVirtualWorld(playerid);
