@@ -18,7 +18,7 @@
 
 ## How To Use
 
-<blockquote>Login via RCON admin and type /(create/delete)sprunk</blockquote>
+<blockquote>Login via RCON admin and type /createsprunk & /deletesprunk</blockquote>
 
 ## Credits
 
