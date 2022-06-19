@@ -16,6 +16,10 @@
   <li><a href="https://github.com/Y-Less/sscanf" target="_blank">sscanf2</a></li></li>
 </ul>
 
+## How To Use
+
+<blockquote>Login via RCON admin and type /(create/delete)sprunk</blockquote>
+
 ## Credits
 
 <ul>
