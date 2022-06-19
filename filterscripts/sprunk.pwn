@@ -141,7 +141,11 @@ public OnPlayerUseMachine(playerid)
 {
 	new Float:health;				
 	GetPlayerHealth(playerid, health);
-	if((health + SPRUNK_HEALTH) <= 100.0) { SetPlayerHealth(playerid, (health + SPRUNK_HEALTH)); }
+	/*
+		- To ensure that player's HP is always set to 100. if player's HP is for example 97.0 and they use the sprunk machine.
+		- With the previous code player's HP would stay the same, only the animation would be applied.
+	*/
+	SetPlayerHealth(playerid, ((health + SPRUNK_HEALTH > 100.0) ? (100.0) : (health + SPRUNK_HEALTH))); // Brackets are not required, depends which compiler version you are using.
 	return ApplyAnimation(playerid, "VENDING", "VEND_Drink2_P", 4.1, 0, 0, 0, 0, 0);
 }
 
