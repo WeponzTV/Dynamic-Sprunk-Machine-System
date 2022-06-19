@@ -1,6 +1,6 @@
 # Dynamic Sprunk Machine System (SA-MP)
 
-<p><em>Create sprunk means anywhere in-game! All machines are saved to a SQLite database.</em></p>
+<p><em>Create sprunk machines anywhere in-game! All machines are saved to a SQLite database.</em></p>
 
 ## Video Preview
 
