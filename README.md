@@ -18,7 +18,11 @@
 
 ## How To Use
 
-<blockquote>Login via RCON admin and type /createsprunk & /deletesprunk</blockquote>
+Login via RCON admin and type /createsprunk & /deletesprunk
+
+## Support
+
+<a href="https://discord.gg/fugKZrqBth" target="_blank"><img src="https://img.shields.io/discord/986844024126210078?label=SA-MP%20Community"/></a>
 
 ## Credits
 
